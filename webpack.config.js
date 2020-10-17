@@ -77,7 +77,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
         portal,
         autoupload,
         src: 'dist',
-        dest: 'cms-vue-boilerplate',
+        dest: 'tech-game',
       }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
@@ -88,6 +88,10 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
           {
             from: 'src/modules',
             to: 'modules',
+          },
+          {
+            from: 'src/templates',
+            to: 'templates',
           },
         ],
       }),
