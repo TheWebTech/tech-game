@@ -1,5 +1,5 @@
 # tech-game
-A game built on the HubSpot platform. 
+A game built on the HubSpot platform. It is built starting from the HubSpot Vue Boilerplate to make the user interface development easy.
 
 This game is currently not playable, it's extremely bare bones.
 
