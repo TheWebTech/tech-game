@@ -1,0 +1,19 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer">
+  <div class="footer__container content-wrapper">
+
+    
+
+    {# Copyright information section #}
+    <div class="footer__copyright">
+      {% module_block module 'footer_copyright_text' path='@hubspot/text' %}
+        {% module_attribute 'value' %}© {{ year }} All rights reserved.{% end_module_attribute %}
+      {% end_module_block %}
+    </div>
+    {# End copyright information section #}
+
+  </div>
+</footer>
