@@ -5,7 +5,7 @@ This game is currently not playable, it's extremely bare bones.
 
 ## Requirements:
 * CMS Hub Enterprise
-
+* system templates need to be assigned
 
 # cms-vue-boilerplate [beta]
 Boilerplate [Vue](https://vuejs.org/) project for creating apps using modules on the HubSpot CMS
