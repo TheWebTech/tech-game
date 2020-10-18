@@ -1,14 +1,14 @@
 <template>
   <div class="game-container">
     
-    
+    <GameStats :player="player" />
     <Card :initialClickCount="moduleData.initial_count" />
   </div>
 </template>
 
 <script>
 import Card from '@/components/Card.vue';
-import SpinningLogo from '@/components/SpinningLogo.vue';
+import GameStats from '@/components/GameStats.vue';
 import sprocketLogo from '@/assets/sprocket.svg';
 import vueLogo from '@/assets/vue.svg';
 
@@ -17,17 +17,25 @@ export default {
   props: ['moduleData'],
   data: function() {
     return {
-      sprocketLogo,
+      
       vueLogo,
-      money:0,
-      employee_count:0,
-      employee_nps:0,
-      customer_nps:0,
-      customer_count:0,
-      flywheel:{
-        attract: 0,
-        engage:0,
-        delight:0,
+      player:{
+        money:0,
+        employees:{
+          count:0, //number of employees
+          nps:0, //current employee NPS
+        },
+        customers:{
+          count:0, // number of customers
+          nps:0, // current customer NPS
+          
+        },
+        
+        flywheel:{
+          attract: 0,
+          engage:0,
+          delight:0,
+        }
       }
 
     };
@@ -41,7 +49,7 @@ export default {
   },
   components: {
     Card,
-    SpinningLogo,
+    GameStats,
   },
 };
 </script>
