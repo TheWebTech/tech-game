@@ -8,7 +8,6 @@
 <script>
 import Card from '@/components/Card.vue';
 import GameStats from '@/components/GameStats.vue';
-import sprocketLogo from '@/assets/sprocket.svg';
 import vueLogo from '@/assets/vue.svg';
 
 export default {
