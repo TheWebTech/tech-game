@@ -1,0 +1,25 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Tech Game - main view
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+
+    {# Main section #}
+    {% dnd_section
+      vertical_alignment='MIDDLE'
+    %}
+      
+    {% dnd_module "cms_vue_boilerplate" path="./modules/app" label="Game" %}
+    {% end_dnd_module %}
+
+    {% end_dnd_section %}
+    {# End main section #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
