@@ -8,7 +8,11 @@
     data-portal-id="{{ portalId }}">
       {
       "module":{{ module|tojson }},
-      "player":{{ request_contact|tojson }}
+      "player":{
+        "company": "{{ request_contact.contact.techgame_company_name }}",
+        "founder_name": "{{ request_contact.contact.techgame_founder_name }}",
+        "raw_data": {{ request_contact|tojson }} {# Once fleshed out only output specific variables we need #}
+      }
       }
   </script>
 
