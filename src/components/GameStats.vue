@@ -13,10 +13,10 @@
     <details>
       <summary id="stats__customer-count">
         {{ player.customers.count }} Customers
+        <span title="NPS score"> {{ customerNPSEmoji }} </span>
       </summary>
       <div id="stats__customer-nps">
         Customer NPS: {{ player.customers.nps }}
-        <span title="NPS score"> {{ customerNPSEmoji }} </span>
       </div>
     </details>
     <details>
@@ -50,30 +50,30 @@ export default {
       }
     },
     employeeNPSEmoji: function() {
-      return this.NPSEmoji(this.employeeNPS);
+      return this.NPSEmoji(this.player.employees.nps);
     },
     customerNPSEmoji: function() {
-      return this.NPSEmoji(this.customerNPS);
+      return this.NPSEmoji(this.player.customers.nps);
     },
   },
   methods: {
-    NPSEmoji(nps) {
-      if (nps > 8) {
+    NPSEmoji: function(nps) {
+      if (nps >= 9) {
         return '😍';
       }
-      if (8 > nps > 7) {
+      if (nps >= 7) {
         return '😊';
       }
-      if (7 > nps > 6) {
+      if (nps >= 6) {
         return '😀';
       }
-      if (6 > nps > 5) {
+      if (nps >= 5) {
         return '😐';
       }
-      if (5 > nps > 4) {
+      if (nps >= 4) {
         return '😕';
       }
-      if (4 > nps > 2) {
+      if (nps >= 2) {
         return '😔';
       }
       if (nps == 1) {
