@@ -9,5 +9,14 @@
     "name": "initial_count",
     "required": false,
     "type": "number"
-  }
+  },
+  {
+  "name": "debug_mode",
+  "label": "debug mode",
+  "required": false,
+  "locked": false,
+  "type": "boolean",
+  "inline_help_text": "",
+  "help_text": "Shows variables and provides ways to cheat",
+  "default": false }
 ]

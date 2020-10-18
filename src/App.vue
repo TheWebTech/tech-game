@@ -19,6 +19,17 @@ export default {
     return {
       sprocketLogo,
       vueLogo,
+      money:0,
+      employee_count:0,
+      employee_nps:0,
+      customer_nps:0,
+      customer_count:0,
+      flywheel:{
+        attract: 0,
+        engage:0,
+        delight:0,
+      }
+
     };
   },
   created: function() {
