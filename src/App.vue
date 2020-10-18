@@ -1,6 +1,5 @@
 <template>
   <div class="game-container">
-    
     <GameStats :player="player" />
     <Card :initialClickCount="moduleData.initial_count" />
   </div>
@@ -17,7 +16,6 @@ export default {
   props: ['moduleData'],
   data: function() {
     return {
-      
       vueLogo,
       player:{
         day:1,
@@ -30,14 +28,12 @@ export default {
           count:0, // number of customers
           nps:0, // current customer NPS
         },
-        
         flywheel:{
           attract: 0,
           engage:0,
           delight:0,
         }
       }
-
     };
   },
   created: function() {
@@ -66,6 +62,4 @@ export default {
   color: white;
   padding: 1rem 0 1rem 0;
 }
-
-
 </style>
