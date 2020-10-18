@@ -1,10 +1,7 @@
 <template>
-  <div class="cms-vue-boilerplate-container">
-    <div class="spinning-logo-container">
-      <SpinningLogo :src="vueLogo" alt="Vue logo" />
-      <SpinningLogo :src="sprocketLogo" alt="sprocket logo" isSprocket="true" />
-    </div>
-    <p>Edit <code>src/App.js</code> and save to reload.</p>
+  <div class="game-container">
+    
+    
     <Card :initialClickCount="moduleData.initial_count" />
   </div>
 </template>
@@ -39,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cms-vue-boilerplate-container {
+.game-container {
   text-align: center;
   background-color: #282c34;
   display: flex;
@@ -51,7 +48,5 @@ export default {
   padding: 1rem 0 1rem 0;
 }
 
-.spinning-logo__container {
-  flex-direction: row;
-}
+
 </style>
