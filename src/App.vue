@@ -21,11 +21,11 @@ export default {
         money: 0,
         employees: {
           count: 0, //number of employees
-          nps: 0, //current employee NPS
+          nps: 1, //current employee NPS
         },
         customers: {
           count: 0, // number of customers
-          nps: 0, // current customer NPS
+          nps: 1, // current customer NPS
         },
         flywheel: {
           attract: 0,
