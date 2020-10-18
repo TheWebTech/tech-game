@@ -6,7 +6,10 @@
   <script type="application/json"
     data-module-instance="{{ instance_id }}"
     data-portal-id="{{ portalId }}">
-      {{ module|tojson }}
+      {
+      "module":{{ module|tojson }},
+      "player":"player name"
+      }
   </script>
 
   <div id="App--{{ instance_id }}"></div>
