@@ -2,17 +2,17 @@
   <div id="stats">
     <div id="stats__day">Day {{ player.day }}</div>
     <details>
-      <summary id="stats__employee-count"
-        >{{ player.employees.count }} Employees</summary
-      >
+      <summary id="stats__employee-count">
+        {{ player.employees.count }} Employees
+      </summary>
       <div id="stats__employee-nps">
         Employee NPS: {{ player.employees.nps }}
       </div>
     </details>
     <details>
-      <summary id="stats__customer-count"
-        >{{ player.customers.count }} Customers</summary
-      >
+      <summary id="stats__customer-count">
+        {{ player.customers.count }} Customers
+      </summary>
       <div id="stats__customer-nps">
         Customer NPS: {{ player.customers.nps }}
       </div>
