@@ -47,7 +47,11 @@
           </div>
         </div>
         {# End header navigation row two #}
-  
+        {% if request_contact.is_logged_in %}
+          You're signed in!
+      {% else %}
+          <a href="/_hcms/mem/login">Log In</a>
+      {% endif %}
       </div>
       {# End header navigation column #}
   
