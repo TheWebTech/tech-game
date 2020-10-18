@@ -1,6 +1,5 @@
 <template>
   <div id="stats">
-    
     <details>
       <summary id="stats__employee-count">{{ player.employees.count }} Employees</summary>
       <div id="stats__employee-nps">Employee NPS: {{ player.employees.nps }}</div>
@@ -15,7 +14,7 @@
       <div id="stats__flywheel-engage">Engage: {{ player.flywheel.engage }}</div>
       <div id="stats__flywheel-delight">Delight: {{ player.flywheel.delight }}</div>
     </details>
-    <div id="stats__money">${{ player.money }}</div>
+    <div id="stats__money" :class="{'text-red' : isMoneyNegative }">$ {{ player.money }}</div>
   </div>
 </template>
 
@@ -23,6 +22,16 @@
 export default {
   name: 'GameStats',
   props: ['player'],
+  computed:{
+    isMoneyNegative:function(){
+      if (this.player.money < 1){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+  }
   
 };
 </script>
@@ -36,4 +45,6 @@ export default {
     padding: 5px 0;
     min-height: 50px;
   }
+  #stats__money{color:green}
+  #stats__money.text-red{color:red}
 </style>
