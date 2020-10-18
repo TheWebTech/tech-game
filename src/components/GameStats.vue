@@ -1,5 +1,6 @@
 <template>
   <div id="stats">
+    <div id="stats__day">Day {{ player.day }}</div>
     <details>
       <summary id="stats__employee-count">{{ player.employees.count }} Employees</summary>
       <div id="stats__employee-nps">Employee NPS: {{ player.employees.nps }}</div>

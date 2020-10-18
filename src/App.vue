@@ -20,6 +20,7 @@ export default {
       
       vueLogo,
       player:{
+        day:1,
         money:0,
         employees:{
           count:0, //number of employees
@@ -28,7 +29,6 @@ export default {
         customers:{
           count:0, // number of customers
           nps:0, // current customer NPS
-          
         },
         
         flywheel:{
