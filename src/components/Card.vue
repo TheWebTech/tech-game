@@ -40,6 +40,17 @@ export default {
   padding: 0.5em 1em;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
+  .close-btn{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0 transparent;
+    font-size: 1.5em;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
   .btn {
     border: 1px solid #ff7a59;
     background-color: #ff7a59;
