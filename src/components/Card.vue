@@ -30,11 +30,14 @@ export default {
 <style lang="scss">
 .card {
   max-width: 70%;
-  width:400px;
+  width: 400px;
   margin-bottom: 40px;
   padding: 0.5em 1em;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
+  top: 50%;
+   left: 50%;
+  transform: translate(-50%, -50%);
   .close-btn {
     -webkit-appearance: none;
     -moz-appearance: none;

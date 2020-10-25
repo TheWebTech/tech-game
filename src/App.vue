@@ -3,7 +3,7 @@
     <GameStats :player="player" :serverInitial="moduleData.serverInitial" />
     <Card :open="cardDisplayed" :dismissable="true">
       <p>
-      Test language
+        Test language
       </p>
     </Card>
   </div>
@@ -12,7 +12,6 @@
 <script>
 import Card from '@/components/Card.vue';
 import GameStats from '@/components/GameStats.vue';
-
 
 export default {
   name: 'App',
@@ -37,7 +36,7 @@ export default {
         },
       },
       cardDisplayed: true,
-      cardDismissable: true
+      cardDismissable: true,
     };
   },
   created: function() {
@@ -61,9 +60,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + .5vw);
+  /* justify-content: center; */
+  font-size: calc(10px + 0.5vw);
   color: white;
   padding: 1rem 0 1rem 0;
+  height: calc(100vh - 100px);
 }
 </style>
