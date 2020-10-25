@@ -1,10 +1,10 @@
 <template>
-  <dialog :open="open" class="cms-vue-boilerplate-card">
+  <dialog :open="open" class="card" v-on:keyup.esc="dismissCard">
     <button
       v-if="dismissable"
       class="close-btn"
       aria-label="Close card"
-      @click="open = false"
+      @click="dismissCard"
     >
       X
     </button>
@@ -19,12 +19,18 @@
 export default {
   name: 'Card',
   props: ['open', 'dismissable'],
+  methods: {
+    dismissCard: function() {
+      this.open = false;
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.cms-vue-boilerplate-card {
-  max-width: 500px;
+.card {
+  max-width: 70%;
+  width:400px;
   margin-bottom: 40px;
   padding: 0.5em 1em;
   background-color: rgb(255, 255, 255);
