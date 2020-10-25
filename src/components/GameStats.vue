@@ -1,6 +1,10 @@
 <template>
   <div id="stats">
-    <div id="stats__day">Day {{ player.day }}</div>
+    <div id="stats__day">
+      <div v-if="serverInitial.company">{{ serverInitial.company }}</div>
+      
+      Day {{ player.day }}
+    </div>
     <details>
       <summary id="stats__employee-count">
         {{ player.employees.count }} Employees
@@ -40,7 +44,7 @@
 <script>
 export default {
   name: 'GameStats',
-  props: ['player'],
+  props: ['player','serverInitial'],
   computed: {
     isMoneyNegative: function() {
       if (this.player.money < 1) {
