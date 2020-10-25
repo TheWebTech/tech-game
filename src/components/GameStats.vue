@@ -2,7 +2,6 @@
   <div id="stats">
     <div id="stats__day">
       <div v-if="serverInitial.company">{{ serverInitial.company }}</div>
-      
       Day {{ player.day }}
     </div>
     <details>
@@ -44,7 +43,7 @@
 <script>
 export default {
   name: 'GameStats',
-  props: ['player','serverInitial'],
+  props: ['player', 'serverInitial'],
   computed: {
     isMoneyNegative: function() {
       if (this.player.money < 1) {

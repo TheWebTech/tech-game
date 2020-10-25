@@ -1,7 +1,14 @@
 <template>
   <dialog :open="open" class="cms-vue-boilerplate-card">
-    <button v-if="dismissable" class="close-btn" aria-label="Close card" @click="open=false">X</button>
-   <slot/>
+    <button
+      v-if="dismissable"
+      class="close-btn"
+      aria-label="Close card"
+      @click="open = false"
+    >
+      X
+    </button>
+    <slot />
     <button class="btn">
       Click me!
     </button>
@@ -9,27 +16,9 @@
 </template>
 
 <script>
-const pluralize = (n, noun, suffix) =>
-  `${n !== 1 ? 'are' : 'is'} ${n} ${noun + (n !== 1 ? suffix : '')}`;
-
 export default {
   name: 'Card',
-  props: ['open','dismissable'],
-  
-  computed: {
-    reasonsText() {
-      return `There are ${
-        this.reasonsCount > 0
-          ? pluralize(this.reasonsCount, 'reason', 's')
-          : 'so many reasons'
-      } to use HubSpot CMS + Vue!`;
-    },
-  },
-  methods: {
-    increaseClickCount() {
-      this.reasonsCount += 1;
-    },
-  },
+  props: ['open', 'dismissable'],
 };
 </script>
 
@@ -40,7 +29,7 @@ export default {
   padding: 0.5em 1em;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
-  .close-btn{
+  .close-btn {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
