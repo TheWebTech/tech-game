@@ -1,12 +1,12 @@
 <template>
-  <div class="cms-vue-boilerplate-card">
+  <dialog :open="open" class="cms-vue-boilerplate-card">
     <p>
       {{ reasonsText }}
     </p>
-    <button class="btn" v-on:click="increaseClickCount">
+    <button class="btn">
       Click me!
     </button>
-  </div>
+  </dialog>
 </template>
 
 <script>
@@ -15,12 +15,8 @@ const pluralize = (n, noun, suffix) =>
 
 export default {
   name: 'Card',
-  props: ['initialClickCount'],
-  data: function() {
-    return {
-      reasonsCount: this.initialClickCount,
-    };
-  },
+  props: ['open'],
+  
   computed: {
     reasonsText() {
       return `There are ${
@@ -43,7 +39,7 @@ export default {
   max-width: 500px;
   margin-bottom: 40px;
   padding: 0.5em 1em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
   border-radius: 6px;
   .btn {
     border: 1px solid #ff7a59;
