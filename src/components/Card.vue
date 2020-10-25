@@ -1,5 +1,6 @@
 <template>
   <dialog :open="open" class="cms-vue-boilerplate-card">
+    <button v-if="dismissable" class="close-btn" aria-label="Close card" @click="open=false">X</button>
     <p>
       {{ reasonsText }}
     </p>
@@ -15,7 +16,7 @@ const pluralize = (n, noun, suffix) =>
 
 export default {
   name: 'Card',
-  props: ['open'],
+  props: ['open','dismissable'],
   
   computed: {
     reasonsText() {

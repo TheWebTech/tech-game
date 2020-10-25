@@ -1,7 +1,7 @@
 <template>
   <div class="game-container">
     <GameStats :player="player" :serverInitial="moduleData.serverInitial" />
-    <Card :open="cardDisplayed" />
+    <Card :open="cardDisplayed" :dismissable="true"/>
   </div>
 </template>
 
@@ -32,7 +32,8 @@ export default {
           delight: 0,
         },
       },
-      cardDisplayed: true
+      cardDisplayed: true,
+      cardDismissable: true
     };
   },
   created: function() {
