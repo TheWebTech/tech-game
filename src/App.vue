@@ -1,21 +1,20 @@
 <template>
   <div class="game-container">
-    <GameStats :player="player" />
-    <Card :initialClickCount="moduleData.initial_count" />
+    <GameStats :player="player" :serverInitial="moduleData.serverInitial" />
+    <Card :open="cardDisplayed" />
   </div>
 </template>
 
 <script>
 import Card from '@/components/Card.vue';
 import GameStats from '@/components/GameStats.vue';
-import vueLogo from '@/assets/vue.svg';
+
 
 export default {
   name: 'App',
   props: ['moduleData'],
   data: function() {
     return {
-      vueLogo,
       player: {
         day: 1,
         money: 0,
@@ -33,6 +32,7 @@ export default {
           delight: 0,
         },
       },
+      cardDisplayed: true
     };
   },
   created: function() {
@@ -57,7 +57,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + .5vw);
   color: white;
   padding: 1rem 0 1rem 0;
 }
