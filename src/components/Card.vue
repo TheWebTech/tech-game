@@ -8,10 +8,14 @@
     >
       X
     </button>
-    <slot />
-    <button class="btn">
-      Click me!
-    </button>
+    <div>
+      <slot name="description" />
+    </div>
+    <div>
+      <button class="btn">
+        Click me!
+      </button>
+    </div>
   </dialog>
 </template>
 
@@ -35,9 +39,14 @@ export default {
   padding: 0.5em 1em;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
+  position: absolute;
   top: 50%;
-   left: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+  }
   .close-btn {
     -webkit-appearance: none;
     -moz-appearance: none;

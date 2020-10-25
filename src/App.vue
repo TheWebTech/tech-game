@@ -2,9 +2,9 @@
   <div class="game-container">
     <GameStats :player="player" :serverInitial="moduleData.serverInitial" />
     <Card :open="cardDisplayed" :dismissable="true">
-      <p>
-        Test language
-      </p>
+      <template slot="description">
+        Message test
+      </template>
     </Card>
   </div>
 </template>
@@ -65,5 +65,6 @@ export default {
   color: white;
   padding: 1rem 0 1rem 0;
   height: calc(100vh - 100px);
+  position: relative;
 }
 </style>
