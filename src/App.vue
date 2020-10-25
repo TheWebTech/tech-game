@@ -1,7 +1,11 @@
 <template>
   <div class="game-container">
     <GameStats :player="player" :serverInitial="moduleData.serverInitial" />
-    <Card :open="cardDisplayed" :dismissable="true"/>
+    <Card :open="cardDisplayed" :dismissable="true">
+      <p>
+      Test language
+      </p>
+    </Card>
   </div>
 </template>
 
